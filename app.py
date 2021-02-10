@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
  
 #load model
-model =load_model(r"C:\Users\user\Documents\cat-huhu\models\dog-cat.h5")
+model =load_model(r"dog-cat.h5")
  
 print('@@ Model loaded')
  
@@ -60,10 +60,9 @@ def predict():
         return render_template('predict.html', pred_output = pred, user_image = file_path)
      
 #Fo local system
-if __name__ == "__main__":
-    app.run(debug=True) 
+
      
 # #Fo AWS cloud
-# if __name__ == "__main__":
-#     app.run(host='0.0.0.0.0', post='8080',threaded=False,) 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0.0', post='8080',threaded=False) 
     
